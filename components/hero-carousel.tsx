@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { ChevronLeft, ChevronRight, Smartphone, Monitor, Zap } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -37,7 +37,11 @@ const slides = [
 export function HeroCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
+  const touchStartX = useRef<number | null>(null)
+  const touchEndX = useRef<number | null>(null)
+  const carouselRef = useRef<HTMLDivElement>(null)
 
+  // Auto-play
   useEffect(() => {
     if (!isAutoPlaying) return
 
@@ -63,6 +67,34 @@ export function HeroCarousel() {
     setIsAutoPlaying(false)
   }
 
+  // Touch Events pour swipe mobile
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.changedTouches[0].screenX
+    touchEndX.current = null
+  }
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.changedTouches[0].screenX
+  }
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return
+
+    const diff = touchStartX.current - touchEndX.current
+    const threshold = 50 // pixels min pour déclencher
+
+    if (Math.abs(diff) > threshold) {
+      if (diff > 0) {
+        nextSlide() // swipe gauche → slide suivante
+      } else {
+        prevSlide() // swipe droite → slide précédente
+      }
+    }
+
+    touchStartX.current = null
+    touchEndX.current = null
+  }
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-background via-background to-primary/5 pt-20 btp-pattern">
       <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-subtle" />
@@ -73,15 +105,25 @@ export function HeroCarousel() {
 
       <div className="container mx-auto px-4 py-12 md:py-20 lg:py-24 relative z-10">
         <div className="relative">
-          {/* Slides */}
-          <div className="relative min-h-[500px] md:min-h-[550px] lg:min-h-[600px]">
+          {/* Slides Container - Swipe activé sur mobile */}
+          <div
+            ref={carouselRef}
+            className="relative min-h-[500px] md:min-h-[550px] lg:min-h-[600px] touch-pan-y"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
             {slides.map((slide, index) => {
               const Icon = slide.icon
               return (
                 <div
                   key={index}
                   className={`absolute inset-0 transition-all duration-700 ${
-                    index === currentSlide ? "opacity-100 translate-x-0 z-10" : "opacity-0 translate-x-full z-0"
+                    index === currentSlide
+                      ? "opacity-100 translate-x-0 z-10"
+                      : index < currentSlide
+                      ? "opacity-0 -translate-x-full z-0"
+                      : "opacity-0 translate-x-full z-0"
                   }`}
                 >
                   <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center h-full">
@@ -92,7 +134,6 @@ export function HeroCarousel() {
                         <span className="text-sm font-semibold">Solution BTP Professionnelle</span>
                       </div>
 
-                      {/* Title + Subtitle avec taille réduite */}
                       <div>
                         <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
                           {slide.title}
@@ -145,10 +186,10 @@ export function HeroCarousel() {
             })}
           </div>
 
-          {/* Navigation Arrows */}
+          {/* Navigation Arrows - Cachés sur mobile */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 lg:-left-4 top-1/2 -translate-y-1/2 bg-background/90 backdrop-blur-sm hover:bg-background border border-border rounded-full p-3 lg:p-4 transition-all hover:scale-110 shadow-lg z-20"
+            className="hidden md:block absolute left-0 lg:-left-4 top-1/2 -translate-y-1/2 bg-background/90 backdrop-blur-sm hover:bg-background border border-border rounded-full p-3 lg:p-4 transition-all hover:scale-110 shadow-lg z-20"
             aria-label="Previous slide"
           >
             <ChevronLeft className="h-5 w-5 lg:h-6 lg:w-6" />
@@ -156,7 +197,7 @@ export function HeroCarousel() {
 
           <button
             onClick={nextSlide}
-            className="absolute right-0 lg:-right-4 top-1/2 -translate-y-1/2 bg-background/90 backdrop-blur-sm hover:bg-background border border-border rounded-full p-3 lg:p-4 transition-all hover:scale-110 shadow-lg z-20"
+            className="hidden md:block absolute right-0 lg:-right-4 top-1/2 -translate-y-1/2 bg-background/90 backdrop-blur-sm hover:bg-background border border-border rounded-full p-3 lg:p-4 transition-all hover:scale-110 shadow-lg z-20"
             aria-label="Next slide"
           >
             <ChevronRight className="h-5 w-5 lg:h-6 lg:w-6" />

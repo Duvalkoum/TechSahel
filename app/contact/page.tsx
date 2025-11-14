@@ -270,7 +270,7 @@ export default function ContactPage() {
               <div className="p-6 text-center bg-card/80 backdrop-blur-sm">
                 <p className="text-lg font-semibold flex items-center justify-center gap-2">
                   <MapPin className="h-5 w-5 text-primary" />
-                   Deïdo, Douala, Cameroun
+                    Douala, Cameroun
                 </p>
                 <p className="text-sm text-muted-foreground mt-1">
                   Cliquez sur la carte pour ouvrir dans Google Maps
