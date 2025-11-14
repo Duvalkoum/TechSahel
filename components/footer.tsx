@@ -125,13 +125,13 @@ export function Footer() {
               <li className="flex items-center gap-2 text-background/70 text-sm">
                 <Phone className="w-4 h-4 flex-shrink-0" />
                 <a href="tel:+237123456789" className="hover:text-primary transition-colors">
-                  +237 123 456 789
+                  +237 622 000 000
                 </a>
               </li>
               <li className="flex items-center gap-2 text-background/70 text-sm">
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                <a href="mailto:contact@techservices-cm.com" className="hover:text-primary transition-colors">
-                  contact@techservices-cm.com
+                <a href="mailto:TechServices@gmail.com" className="hover:text-primary transition-colors">
+                  TechServices@gmail.com
                 </a>
               </li>
             </ul>

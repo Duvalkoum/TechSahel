@@ -6,7 +6,7 @@ export default function TarifsPage() {
     {
       name: "Gratuit",
       price: "0",
-      description: "Pour découvrir TechServices Pro",
+      description: "Pour découvrir TechServices",
       icon: Smartphone,
       features: [
         "Accès à l'application mobile",
@@ -181,7 +181,7 @@ export default function TarifsPage() {
           <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl p-12 md:p-16 text-center max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Prêt à commencer ?</h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Rejoignez des milliers de professionnels qui font confiance à TechServices Pro
+              Rejoignez des milliers de professionnels qui font confiance à TechServices
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button size="lg" asChild className="text-lg px-8">

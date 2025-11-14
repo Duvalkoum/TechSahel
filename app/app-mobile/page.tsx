@@ -17,7 +17,7 @@ export default function AppMobilePage() {
             <h1 className="text-5xl md:text-6xl font-bold text-balance mb-6">L'application BTP dans votre poche</h1>
 
             <p className="text-xl text-muted-foreground text-balance mb-8 max-w-2xl mx-auto">
-              Téléchargez TechServices Pro et accédez à tous vos projets, trouvez des professionnels qualifiés et gérez
+              Téléchargez TechServices et accédez à tous vos projets, trouvez des professionnels qualifiés et gérez
               votre activité où que vous soyez.
             </p>
 
@@ -53,7 +53,7 @@ export default function AppMobilePage() {
                 Pour les Clients
               </TabsTrigger>
               <TabsTrigger value="pros" className="text-lg">
-                Pour les Pros
+                Pour les Techniciens
               </TabsTrigger>
             </TabsList>
 

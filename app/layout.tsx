@@ -51,7 +51,7 @@ export default function RootLayout({
     <html lang="fr" className={`${inter.variable} ${poppins.variable}`}>
       <body className="font-body antialiased">
         <div className="watermark" aria-hidden="true">
-          TECHSERVICES PRO
+          TECHSERVICES
         </div>
         <Navigation />
         <main>{children}</main>

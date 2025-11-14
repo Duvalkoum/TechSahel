@@ -99,7 +99,7 @@ export default function FonctionnalitesPage() {
               Toutes les fonctionnalités pour réussir dans le BTP
             </h1>
             <p className="text-xl text-muted-foreground text-balance max-w-2xl mx-auto">
-              TechServices Pro vous offre tous les outils nécessaires pour gérer efficacement votre activité et
+              TechServices vous offre tous les outils nécessaires pour gérer efficacement votre activité et
               développer votre business
             </p>
           </div>

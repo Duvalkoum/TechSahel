@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 const slides = [
   {
     title: "Gérez vos projets BTP",
-    subtitle: "avec TechServices Pro",
+    subtitle: "avec TechServices",
     description: "L'application tout-en-un pour les professionnels du bâtiment",
     image: "/modern-construction-site-with-workers-using-tablet.jpg",
     cta: "Télécharger l'App",

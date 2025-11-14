@@ -22,7 +22,7 @@ export default function VoletWebPage() {
             </p>
 
             <Button size="lg" asChild className="text-lg px-8">
-              <a href="https://app.techservices-cm.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://web.techservices-cm.com" target="_blank" rel="noopener noreferrer">
                 Accéder au Dashboard <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>
@@ -37,7 +37,7 @@ export default function VoletWebPage() {
             <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl p-8 md:p-12">
               <img
                 src="/professional-construction-management-dashboard-int.jpg"
-                alt="Dashboard TechServices Pro"
+                alt="Dashboard TechServices"
                 className="rounded-2xl shadow-2xl w-full"
               />
             </div>
@@ -171,7 +171,7 @@ export default function VoletWebPage() {
                 asChild
                 className="text-lg px-8 bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
               >
-                <a href="https://app.techservices-cm.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://web.techservices-cm.com" target="_blank" rel="noopener noreferrer">
                   Accéder au Dashboard
                 </a>
               </Button>
