@@ -102,7 +102,7 @@ export default function AppMobilePage() {
                 </div>
                 <div className="relative">
                   <img
-                    src="/mobile-app-interface-for-finding-construction-prof.jpg"
+                    src="/screenmockup2.jpg"
                     alt="App pour clients"
                     className="rounded-3xl shadow-2xl mx-auto"
                   />
@@ -114,7 +114,7 @@ export default function AppMobilePage() {
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="order-2 md:order-1 relative">
                   <img
-                    src="/mobile-app-interface-for-construction-professional.jpg"
+                    src="/screenmockup1.jpg"
                     alt="App pour professionnels"
                     className="rounded-3xl shadow-2xl mx-auto"
                   />
