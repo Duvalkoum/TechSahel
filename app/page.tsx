@@ -235,7 +235,7 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500" />
                   <div className="relative bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl p-8 backdrop-blur-sm border border-primary/20 group-hover:scale-105 transition-all duration-500">
                     <img
-                      src="/modern-mobile-app-mockup-construction-btp.jpg"
+                      src="screenmockup.jpg"
                       alt="TechServices App"
                       className="rounded-2xl shadow-2xl mx-auto w-full h-auto"
                     />
