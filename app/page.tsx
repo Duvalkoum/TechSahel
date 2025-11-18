@@ -173,85 +173,101 @@ export default function HomePage() {
       </section>
 
       {/* Why Download Section */}
-<section className="py-15 lg:py-32 relative overflow-hidden">
-  <div className="container mx-auto px-4">
-    <div className="max-w-4xl mx-auto">
-      {/* Titre déplacé AU-DESSUS des deux colonnes */}
-      <div ref={whyDownloadAnim.ref} className="text-center mb-12 lg:mb-16">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-balance leading-tight">
-          Pourquoi télécharger{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-            TechServices
-          </span>{" "}
-          ?
-        </h2>
-      </div>
-      
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        {/* Colonne gauche - Points */}
-        <div
-          className={`transition-all duration-1000 ${
-            whyDownloadAnim.isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
-          }`}
-        >
-          <div className="space-y-6">
-            {[
-              {
-                title: "Gagnez du temps",
-                description:
-                  "Trouvez rapidement les bons professionnels et gérez tous vos projets depuis une seule application.",
-              },
-              {
-                title: "Augmentez votre chiffre d'affaires",
-                description:
-                  "Accédez à de nouvelles opportunités et développez votre réseau professionnel dans le BTP.",
-              },
-              {
-                title: "Simplifiez votre gestion",
-                description:
-                  "Centralisez devis, factures, planning et communication dans un seul outil professionnel.",
-              },
-              {
-                title: "Travaillez en toute confiance",
-                description: "Profils vérifiés, avis clients, paiements sécurisés et support client réactif.",
-              },
-            ].map((item, index) => (
-              <div key={index} className="flex gap-4 group hover:translate-x-2 transition-transform duration-300">
-                <div className="flex-shrink-0">
-                  <div className="bg-gradient-to-br from-success/20 to-success/10 w-12 h-12 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <CheckCircle className="h-6 w-6 text-success" />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-xl lg:text-2xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+      <section className="py-15 lg:py-32 relative overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            {/* Titre au-dessus des deux colonnes */}
+            <div ref={whyDownloadAnim.ref} className="text-center mb-12 lg:mb-16">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-balance leading-tight">
+                Pourquoi télécharger{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+                  TechServices
+                </span>{" "}
+                ?
+              </h2>
+            </div>
+            
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+              {/* Colonne gauche - Points */}
+              <div
+                className={`transition-all duration-1000 ${
+                  whyDownloadAnim.isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+                }`}
+              >
+                <div className="space-y-6">
+                  {[
+                    {
+                      title: "Gagnez du temps",
+                      description:
+                        "Trouvez rapidement les bons professionnels et gérez tous vos projets depuis une seule application.",
+                    },
+                    {
+                      title: "Augmentez votre chiffre d'affaires",
+                      description:
+                        "Accédez à de nouvelles opportunités et développez votre réseau professionnel dans le BTP.",
+                    },
+                    {
+                      title: "Simplifiez votre gestion",
+                      description:
+                        "Centralisez devis, factures, planning et communication dans un seul outil professionnel.",
+                    },
+                    {
+                      title: "Travaillez en toute confiance",
+                      description: "Profils vérifiés, avis clients, paiements sécurisés et support client réactif.",
+                    },
+                  ].map((item, index) => (
+                    <div key={index} className="flex gap-4 group hover:translate-x-2 transition-transform duration-300">
+                      <div className="flex-shrink-0">
+                        <div className="bg-gradient-to-br from-success/20 to-success/10 w-12 h-12 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          <CheckCircle className="h-6 w-6 text-success" />
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-xl lg:text-2xl font-bold mb-2">{item.title}</h3>
+                        <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
 
-        {/* Colonne droite - Image */}
-        <div
-          className={`relative transition-all duration-1000 delay-300 ${
-            whyDownloadAnim.isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
-          }`}
-        >
-          <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500" />
-            <div className="relative bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl p-8 backdrop-blur-sm border border-primary/20 group-hover:scale-105 transition-all duration-500">
-              <img
-                src="screenmockup.jpg"
-                alt="TechServices App"
-                className="rounded-2xl shadow-2xl mx-auto w-full h-auto max-h-[300px] md:max-h-[350px] object-contain"
-              />
+              {/* Colonne droite - Image CORRIGÉE */}
+              <div
+                className={`relative transition-all duration-1000 delay-300 ${
+                  whyDownloadAnim.isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
+                }`}
+              >
+                <div className="relative group w-full">
+                  {/* Background glow */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500" />
+                  
+                  {/* Conteneur image CORRIGÉ - Utilisation d'aspect ratio */}
+                  <div className="relative bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl p-4 sm:p-6 lg:p-8 backdrop-blur-sm border border-primary/20 group-hover:scale-105 transition-all duration-500 w-full">
+                    <div className="relative aspect-[4/5] sm:aspect-[3/4] md:aspect-[4/5] lg:aspect-[3/4] w-full h-auto flex items-center justify-center">
+                      <img
+                        src="/screenmockup.jpg"
+                        alt="TechServices App"
+                        className="rounded-2xl shadow-2xl w-auto h-full max-w-full max-h-full object-contain object-center transition-transform duration-300 group-hover:scale-105"
+                        loading="lazy"
+                        decoding="async"
+                        onError={(e) => {
+                          // Fallback si l'image ne charge pas
+                          const target = e.target as HTMLImageElement
+                          target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='600' viewBox='0 0 400 600'%3E%3Crect width='400' height='600' fill='%23333'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='18' fill='white'%3EImage non chargée%3C/text%3E%3C/svg%3E"
+                        }}
+                      />
+                    </div>
+                  </div>
+                  
+                  {/* Élément décoratif optionnel */}
+                  <div className="absolute -bottom-4 -right-4 w-20 h-20 lg:w-24 lg:h-24 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-xl opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
+
       {/* Stats Section */}
       <section
         ref={statsAnim.ref}
