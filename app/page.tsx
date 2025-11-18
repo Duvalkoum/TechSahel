@@ -173,9 +173,9 @@ export default function HomePage() {
       </section>
 
       {/* Why Download Section */}
-      <section className="py-20 lg:py-32 relative overflow-hidden">
+      <section className="py-15 lg:py-32 relative overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <div ref={whyDownloadAnim.ref} className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <div
                 className={`transition-all duration-1000 ${
@@ -237,7 +237,7 @@ export default function HomePage() {
                     <img
                       src="screenmockup.jpg"
                       alt="TechServices App"
-                      className="rounded-2xl shadow-2xl mx-auto w-full h-auto"
+                       className="rounded-2xl shadow-2xl mx-auto w-full h-auto max-h-[300px] md:max-h-[350px] object-contain"
                     />
                   </div>
                 </div>
