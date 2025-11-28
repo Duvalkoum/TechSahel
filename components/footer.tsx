@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react"
 
+
 export function Footer() {
   const currentYear = new Date().getFullYear()
 
@@ -87,14 +88,13 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/mentions-legales"
-                  className="text-background/70 hover:text-primary text-sm transition-colors"
+                  href="/legales"
                 >
                   Mentions Légales
                 </Link>
               </li>
               <li>
-                <Link href="/cgu" className="text-background/70 hover:text-primary text-sm transition-colors">
+                <Link href="/CGU" className="text-background/70 hover:text-primary text-sm transition-colors">
                   CGU
                 </Link>
               </li>

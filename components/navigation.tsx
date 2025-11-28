@@ -22,7 +22,7 @@ export function Navigation() {
   const navLinks = [
     { href: "/", label: "Accueil" },
     { href: "/app-mobile", label: "App Mobile" },
-    { href: "/volet-web", label: "Volet Web Pro" },
+    { href: "/volet-web", label: "Volet Web" },
     { href: "/fonctionnalites", label: "Fonctionnalités" },
     { href: "/tarifs", label: "Tarifs" },
     { href: "/contact", label: "Contact" },
