@@ -1,4 +1,4 @@
-import { Smartphone, CheckCircle, Star, Download, Users, Zap, Shield } from "lucide-react"
+import { Smartphone, CheckCircle, Star, Users, Zap, Shield } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
@@ -24,18 +24,22 @@ export default function AppMobilePage() {
             <div className="flex flex-wrap gap-4 justify-center">
               <Button size="lg" asChild className="text-lg px-8">
                 <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">
-                  <svg className="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
-                  </svg>
+                  <img 
+                    src="playstore.png"
+                    alt="Play Store" 
+                    className="h-[1.2em] w-auto object-contain mr-2 flex-shrink-0"
+                  />
                   Télécharger sur Play Store
                 </a>
               </Button>
 
               <Button size="lg" variant="outline" asChild className="text-lg px-8 bg-transparent">
                 <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer">
-                  <svg className="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.1,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.09,16.67C20.06,16.74 19.67,18.11 18.71,19.5M13,3.5C13.73,2.67 14.94,2.04 15.94,2C16.07,3.17 15.6,4.35 14.9,5.19C14.21,6.04 13.07,6.7 11.95,6.61C11.8,5.46 12.36,4.26 13,3.5Z" />
-                  </svg>
+                  <img 
+                    src="appstore.png"
+                    alt="App Store" 
+                    className="h-[1.2em] w-auto object-contain mr-2 flex-shrink-0"
+                  />
                   Télécharger sur App Store
                 </a>
               </Button>
@@ -49,12 +53,8 @@ export default function AppMobilePage() {
         <div className="container mx-auto px-4">
           <Tabs defaultValue="clients" className="max-w-6xl mx-auto">
             <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-12">
-              <TabsTrigger value="clients" className="text-lg">
-                Pour les Clients
-              </TabsTrigger>
-              <TabsTrigger value="pros" className="text-lg">
-                Pour les Techniciens
-              </TabsTrigger>
+              <TabsTrigger value="clients" className="text-lg">Pour les Clients</TabsTrigger>
+              <TabsTrigger value="pros" className="text-lg">Pour les Techniciens</TabsTrigger>
             </TabsList>
 
             <TabsContent value="clients" className="space-y-12">
@@ -66,46 +66,34 @@ export default function AppMobilePage() {
                       <CheckCircle className="h-6 w-6 text-success flex-shrink-0 mt-1" />
                       <div>
                         <h3 className="font-semibold text-lg mb-1">Recherche simplifiée</h3>
-                        <p className="text-muted-foreground">
-                          Trouvez rapidement des techniciens qualifiés par métier, localisation et disponibilité
-                        </p>
+                        <p className="text-muted-foreground">Trouvez rapidement des techniciens qualifiés par métier, localisation et disponibilité</p>
                       </div>
                     </div>
                     <div className="flex gap-3">
                       <CheckCircle className="h-6 w-6 text-success flex-shrink-0 mt-1" />
                       <div>
                         <h3 className="font-semibold text-lg mb-1">Profils vérifiés</h3>
-                        <p className="text-muted-foreground">
-                          Consultez les avis, notes et réalisations des professionnels avant de choisir
-                        </p>
+                        <p className="text-muted-foreground">Consultez les avis, notes et réalisations des professionnels avant de choisir</p>
                       </div>
                     </div>
                     <div className="flex gap-3">
                       <CheckCircle className="h-6 w-6 text-success flex-shrink-0 mt-1" />
                       <div>
                         <h3 className="font-semibold text-lg mb-1">Devis instantanés</h3>
-                        <p className="text-muted-foreground">
-                          Recevez plusieurs devis et comparez les offres en quelques clics
-                        </p>
+                        <p className="text-muted-foreground">Recevez plusieurs devis et comparez les offres en quelques clics</p>
                       </div>
                     </div>
                     <div className="flex gap-3">
                       <CheckCircle className="h-6 w-6 text-success flex-shrink-0 mt-1" />
                       <div>
                         <h3 className="font-semibold text-lg mb-1">Suivi de projet</h3>
-                        <p className="text-muted-foreground">
-                          Suivez l'avancement de vos travaux en temps réel avec photos et rapports
-                        </p>
+                        <p className="text-muted-foreground">Suivez l'avancement de vos travaux en temps réel avec photos et rapports</p>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="relative">
-                  <img
-                    src="/screenmockup2.jpg"
-                    alt="App pour clients"
-                    className="rounded-3xl shadow-2xl mx-auto"
-                  />
+                  <img src="/screenmockup2.jpg" alt="App pour clients" className="rounded-3xl shadow-2xl mx-auto"/>
                 </div>
               </div>
             </TabsContent>
@@ -113,11 +101,7 @@ export default function AppMobilePage() {
             <TabsContent value="pros" className="space-y-12">
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="order-2 md:order-1 relative">
-                  <img
-                    src="/screenmockup1.jpg"
-                    alt="App pour professionnels"
-                    className="rounded-3xl shadow-2xl mx-auto"
-                  />
+                  <img src="/screenmockup1.jpg" alt="App pour professionnels" className="rounded-3xl shadow-2xl mx-auto"/>
                 </div>
                 <div className="order-1 md:order-2">
                   <h2 className="text-4xl font-bold mb-6">Développez votre activité BTP</h2>
@@ -126,36 +110,28 @@ export default function AppMobilePage() {
                       <CheckCircle className="h-6 w-6 text-success flex-shrink-0 mt-1" />
                       <div>
                         <h3 className="font-semibold text-lg mb-1">Nouvelles opportunités</h3>
-                        <p className="text-muted-foreground">
-                          Recevez des demandes de clients qualifiés correspondant à vos compétences
-                        </p>
+                        <p className="text-muted-foreground">Recevez des demandes de clients qualifiés correspondant à vos compétences</p>
                       </div>
                     </div>
                     <div className="flex gap-3">
                       <CheckCircle className="h-6 w-6 text-success flex-shrink-0 mt-1" />
                       <div>
                         <h3 className="font-semibold text-lg mb-1">Gestion simplifiée</h3>
-                        <p className="text-muted-foreground">
-                          Gérez vos devis, factures, planning et équipes depuis une seule app
-                        </p>
+                        <p className="text-muted-foreground">Gérez vos devis, factures, planning et équipes depuis une seule app</p>
                       </div>
                     </div>
                     <div className="flex gap-3">
                       <CheckCircle className="h-6 w-6 text-success flex-shrink-0 mt-1" />
                       <div>
                         <h3 className="font-semibold text-lg mb-1">Visibilité accrue</h3>
-                        <p className="text-muted-foreground">
-                          Créez votre profil professionnel et mettez en avant vos réalisations
-                        </p>
+                        <p className="text-muted-foreground">Créez votre profil professionnel et mettez en avant vos réalisations</p>
                       </div>
                     </div>
                     <div className="flex gap-3">
                       <CheckCircle className="h-6 w-6 text-success flex-shrink-0 mt-1" />
                       <div>
                         <h3 className="font-semibold text-lg mb-1">Paiements sécurisés</h3>
-                        <p className="text-muted-foreground">
-                          Recevez vos paiements rapidement avec notre système de transaction sécurisé
-                        </p>
+                        <p className="text-muted-foreground">Recevez vos paiements rapidement avec notre système de transaction sécurisé</p>
                       </div>
                     </div>
                   </div>
@@ -171,9 +147,7 @@ export default function AppMobilePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Fonctionnalités de l'application</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Tout ce dont vous avez besoin pour réussir vos projets BTP
-            </p>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Tout ce dont vous avez besoin pour réussir vos projets BTP</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -227,11 +201,18 @@ export default function AppMobilePage() {
             </div>
 
             <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl p-8">
-              <Download className="h-12 w-12 text-primary mx-auto mb-4" />
+              {/* Logo TechServices */}
+              <img 
+                src="/logo-techservices.png" 
+                alt="TechServices Logo" 
+                className="h-12 w-auto mx-auto mb-4" 
+              />
+
               <h2 className="text-3xl font-bold mb-4">Téléchargez l'application maintenant</h2>
               <p className="text-muted-foreground mb-6">
                 Gratuit sur iOS et Android. Commencez à gérer vos projets BTP dès aujourd'hui.
               </p>
+
               <div className="flex flex-wrap gap-4 justify-center">
                 {/* Play Store */}
                 <Button size="lg" asChild>
@@ -266,13 +247,16 @@ export default function AppMobilePage() {
                     rel="noopener noreferrer"
                     className="flex items-center"
                   >
-                    <Download className="h-5 w-5 mr-2" />
+                    <img 
+                      src="/logoTS2.png" 
+                      alt="" 
+                      className="h-10 w-auto mr-0 flex-shrink-0"
+                    />
                     Télécharger ici
                   </a>
                 </Button>
               </div>
 
-              {/* Petit texte d'info */}
               <p className="text-sm text-muted-foreground mt-3">
                 Téléchargement direct recommandé uniquement si Play Store n’est pas disponible.
               </p>
@@ -283,3 +267,4 @@ export default function AppMobilePage() {
     </div>
   )
 }
+
