@@ -233,16 +233,19 @@ export default function AppMobilePage() {
                 Gratuit sur iOS et Android. Commencez à gérer vos projets BTP dès aujourd'hui.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
+                {/* Play Store */}
                 <Button size="lg" asChild>
                   <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">
                     <img 
                       src="playstore.png"
-                      alt="App Store" 
+                      alt="Play Store" 
                       className="h-[1.2em] w-auto object-contain mr-2 flex-shrink-0"
                     />
                     Play Store
                   </a>
                 </Button>
+
+                {/* App Store */}
                 <Button size="lg" variant="outline" asChild>
                   <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer">
                     <img 
@@ -253,7 +256,26 @@ export default function AppMobilePage() {
                     App Store
                   </a>
                 </Button>
+
+                {/* Téléchargement direct */}
+                <Button size="lg" variant="secondary" asChild>
+                  <a
+                    href="https://expo.dev/artifacts/eas/8dZNupYiLcyhKkXEqeSrCW.apk"
+                    download
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center"
+                  >
+                    <Download className="h-5 w-5 mr-2" />
+                    Télécharger ici
+                  </a>
+                </Button>
               </div>
+
+              {/* Petit texte d'info */}
+              <p className="text-sm text-muted-foreground mt-3">
+                Téléchargement direct recommandé uniquement si Play Store n’est pas disponible.
+              </p>
             </div>
           </div>
         </div>
