@@ -131,7 +131,7 @@ export function Footer() {
               <li className="flex items-center gap-2 text-background/70 text-sm">
                 <Mail className="w-4 h-4 flex-shrink-0" />
                 <a href="mailto:TechServices@gmail.com" className="hover:text-primary transition-colors">
-                  TechServices@gmail.com
+                  contact@sahelbtp.com
                 </a>
               </li>
             </ul>

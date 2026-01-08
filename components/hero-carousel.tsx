@@ -10,7 +10,7 @@ const slides = [
     subtitle: "avec TechServices",
     description: "L'application tout-en-un pour les professionnels du bâtiment",
     image: "/hero/slide1.jpg", 
-    cta: "Télécharger l'App",
+    cta: "",
     ctaLink: "/app-mobile",
     icon: Smartphone,
   },
