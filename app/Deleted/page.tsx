@@ -31,19 +31,20 @@ export default function DeleteAccountRequest() {
           </p>
         </div>
 
-        {/* Étape 1 : Être connecté – PAS DE SCREEN */}
+        {/* Étape 1 */}
         <div style={styles.stepSection}>
           <h2 style={styles.stepTitle}>1. Être connecté</h2>
           <p style={styles.stepText}>
-            Ouvrez l'application ou le site et connectez-vous avec vos identifiants habituels. Si vous avez oublié votre mot de passe, utilisez la fonction de récupération.
+            Ouvrez l'application ou le site et connectez-vous avec vos identifiants habituels. 
+            Si vous avez oublié votre mot de passe, utilisez la fonction de récupération.
           </p>
         </div>
 
-        {/* Étape 2 : Espace profil */}
+        {/* Étape 2 */}
         <div style={styles.stepSection}>
           <h2 style={styles.stepTitle}>2. Aller sur l'espace profil</h2>
           <p style={styles.stepText}>
-            Une fois connecté, cliquez sur votre avatar ou l'icône profil (généralement en haut à droite) pour accéder à vos paramètres personnels.
+            Une fois connecté, cliquez sur votre avatar ou l'icône profil pour accéder à vos paramètres personnels.
           </p>
           <div style={styles.screenContainer}>
             <img
@@ -54,11 +55,11 @@ export default function DeleteAccountRequest() {
           </div>
         </div>
 
-        {/* Étape 3 : Support client */}
+        {/* Étape 3 */}
         <div style={styles.stepSection}>
           <h2 style={styles.stepTitle}>3. Cliquer sur support client</h2>
           <p style={styles.stepText}>
-            Dans le menu profil, sélectionnez "Support client" ou "Aide".
+            Dans le menu profil, sélectionnez « Support client » ou « Aide ».
           </p>
           <div style={styles.screenContainer}>
             <img
@@ -69,12 +70,13 @@ export default function DeleteAccountRequest() {
           </div>
         </div>
 
-        {/* Étape 4 : Créer un ticket – AVEC SCREEN */}
+        {/* Étape 4 */}
         <div style={styles.stepSection}>
           <h2 style={styles.stepTitle}>4. Créer un ticket</h2>
           <p style={styles.stepText}>
-            Cliquez sur "Nouveau ticket" ou "Contacter le support", puis copiez-collez ce message :
+            Cliquez sur « Nouveau ticket », puis copiez-collez ce message :
           </p>
+
           <div style={styles.copyBox}>
             <p style={styles.copyText}>
               Je souhaite supprimer définitivement mon compte TechServices ainsi que toutes les données personnelles associées.
@@ -87,20 +89,21 @@ export default function DeleteAccountRequest() {
               {copied ? "Copié !" : "Copier le message"}
             </button>
           </div>
+
           <p style={styles.tip}>
             💡 Fournissez le maximum de détails (email, numéro de compte, raison) pour accélérer le traitement.
           </p>
-          {/* Screen réduit ici */}
+
           <div style={styles.screenContainer}>
             <img
               src="/screen-ticket.png"
-              alt="Écran de création de ticket support"
+              alt="Écran création de ticket"
               style={styles.screenMockup}
             />
           </div>
         </div>
 
-        {/* Bouton final */}
+        {/* CTA */}
         <div style={styles.finalCTA}>
           <button
             type="button"
@@ -125,7 +128,6 @@ const styles: Record<string, React.CSSProperties> = {
     justifyContent: "center",
     alignItems: "flex-start",
     padding: "24px 16px",
-    overflowY: "auto",
   },
   card: {
     width: "100%",
@@ -141,8 +143,9 @@ const styles: Record<string, React.CSSProperties> = {
     marginBottom: 28,
   },
   logo: {
+    display: "block",
+    margin: "0 auto 12px auto",
     height: 48,
-    marginBottom: 12,
     objectFit: "contain",
   },
   title: {
@@ -173,10 +176,11 @@ const styles: Record<string, React.CSSProperties> = {
     marginBottom: 16,
   },
   screenContainer: {
-    textAlign: "center",
     margin: "20px 0 12px 0",
   },
   screenMockup: {
+    display: "block",
+    margin: "0 auto",
     maxWidth: 280,
     width: "100%",
     height: "auto",
@@ -209,7 +213,6 @@ const styles: Record<string, React.CSSProperties> = {
     padding: "8px 14px",
     fontSize: 13,
     cursor: "pointer",
-    transition: "background 0.2s",
   },
   tip: {
     fontSize: 13,
@@ -234,6 +237,5 @@ const styles: Record<string, React.CSSProperties> = {
     fontWeight: 600,
     cursor: "pointer",
     boxShadow: "0 2px 8px rgba(6, 139, 191, 0.3)",
-    transition: "all 0.2s ease",
   },
 };
