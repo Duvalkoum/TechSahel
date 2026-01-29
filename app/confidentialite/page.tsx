@@ -40,7 +40,7 @@ const PolitiqueConfidentialite = () => {
           <li><strong>Vous</strong> : la personne qui accède au Service ou l'utilise, ou la société ou toute autre entité juridique au nom de laquelle cette personne accède au Service ou l'utilise.
           </li>
         </ul>
-      </section>
+      </section>         
 
       {/* Collecte et utilisation */}
       <section className="mb-8">
