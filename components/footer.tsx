@@ -79,6 +79,11 @@ export function Footer() {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link href="/Deleted" className="text-background/70 hover:text-primary text-sm transition-colors">
+                  suppression de compte
+                </Link>
+              </li>
             </ul>
           </div>
 
